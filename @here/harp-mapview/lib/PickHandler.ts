@@ -229,8 +229,8 @@ export class PickHandler {
         }
 
         // Intersect any objects added by the user.
-        intersects.length = 0;
         for (const child of this.mapView.mapAnchors.children) {
+            intersects.length = 0;
             rayCaster.intersectObject(child, true, intersects);
 
             for (const intersect of intersects) {
